@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./safety-measures.component.css']
 })
 export class SafetyMeasuresComponent implements OnInit {
+  loading = true; 
 
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000)
+
   }
 
 }

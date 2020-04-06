@@ -1,0 +1,29 @@
+
+<mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
+
+<mat-table [style.display]="loading === false ? 'block' : 'none'" [dataSource]="dataSource" class="mat-elevation-z8">
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell *matCellDef="let company"> {{company.id}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let company"> {{company.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Rating Column -->
+  <ng-container matColumnDef="rating">
+    <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
+    <mat-cell *matCellDef="let company"> {{company.rating}} </mat-cell>
+  </ng-container>
+
+
+</mat-table>
+
+
