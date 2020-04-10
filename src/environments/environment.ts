@@ -6,6 +6,8 @@ export const environment = {
   production: false
 };
 
+export const AIRTABLE_API_KEY = 'testing'
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
