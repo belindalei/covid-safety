@@ -25,14 +25,14 @@ export class CompanyListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.airtableService.getAPIData().subscribe(
-    //   (response) => {
-    //     console.log('response is ', response);
-    //   },
-    //   (error) => {
-    //     console.log('error is ', error);
-    //   }
-    // );
+    this.airtableService.getAPIData().subscribe(
+      (response) => {
+        console.log('response is ', response);
+      },
+      (error) => {
+        console.log('error is ', error);
+      }
+    );
 
     setTimeout(() => {
       this.loading = false;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
-import { AIRTABLE_API_KEY } from '../../../env'
+import { AIRTABLE_API_KEY } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +19,7 @@ export class AirtableService {
   getAPIData() {
     const header = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer' + 
+      'Authorization': 'Bearer' + AIRTABLE_API_KEY 
     })
 
     return this.http.get(this._url, {
