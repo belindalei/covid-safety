@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -40,7 +41,8 @@ import { ContributeComponent } from './contribute/contribute.component';
     MatToolbarModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
