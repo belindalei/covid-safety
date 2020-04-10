@@ -2,7 +2,6 @@
 
 #apikey
 .env
-src/environments/environment.ts
 
 
 # compiled output
