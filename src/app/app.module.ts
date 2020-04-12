@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 import { ShopLocatorComponent } from './shop-locator/shop-locator.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { ContributeComponent } from './contribute/contribute.component';
+import { CompanyInfoComponent } from './company-info/company-info.component';
 
 
 
@@ -31,6 +32,7 @@ import { ContributeComponent } from './contribute/contribute.component';
     ShopLocatorComponent,
     CompanyListComponent,
     ContributeComponent,
+    CompanyInfoComponent,
   ],
   imports: [
     BrowserModule,

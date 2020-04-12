@@ -2,6 +2,7 @@
 
 #apikey
 .env
+airtable.json
 
 
 # compiled output
