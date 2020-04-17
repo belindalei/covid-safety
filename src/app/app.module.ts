@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms';
 
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -45,6 +46,7 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
     MatProgressSpinnerModule,
     MatTableModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

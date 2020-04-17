@@ -41,3 +41,20 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
+
+/* centers information in the middle */
+.info-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+}
+
+h1{
+  text-align: center;
+}
+
+.box{
+  margin: 20px; 
+}

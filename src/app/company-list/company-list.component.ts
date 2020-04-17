@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Company } from '../company'
 import { AirtableService } from '../airtable/airtable.service'
 import { Record } from '../record'
 
@@ -12,14 +11,7 @@ import { Record } from '../record'
 export class CompanyListComponent implements OnInit {
   loading = true;
   displayedColumns: string[] = ['name', 'score'];
-
-  
-  // this is just dummy data
-  // companies: Company[] = [
-  //   {id: 1, name: 'Walmart', rating: 4},
-  //   {id: 2, name: 'Costco', rating: 5},
-  //   {id: 3, name: 'Target', rating: 3}
-  // ] 
+  selectedCompany: Record;
 
   public records = [];
 
@@ -50,6 +42,19 @@ export class CompanyListComponent implements OnInit {
       this.loading = false;
     }, 2000)
   }
+
+  //assigns the clicked hero from the template to compenent's selected company
+  onSelect(record: Record): void {
+    this.selectedCompany = record;
+  }
+
+
+  // this is just dummy data
+  // companies: Company[] = [
+  //   {id: 1, name: 'Walmart', rating: 4},
+  //   {id: 2, name: 'Costco', rating: 5},
+  //   {id: 3, name: 'Target', rating: 3}
+  // ] 
 
   
 
