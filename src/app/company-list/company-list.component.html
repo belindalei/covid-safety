@@ -1,29 +1,65 @@
 
 <mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
 
-<mat-table [style.display]="loading === false ? 'block' : 'none'" [dataSource]="dataSource" class="mat-elevation-z8">
+
+<h2>Company Ratings</h2>
+
+<ul class="records">
+  <li *ngFor="let record of records" style="margin-top:10px;">
+    <span class="badge">{{record["Store Name"]}}</span> {{record["Overall Score (/10)"]}}
+  </li>
+</ul>
+
+
+
+<!-- Angular Material -->
+<!-- <table mat-table *ngIf="dataSource" [dataSource]="dataSource">
+  <tr mat-header-row *matHeaderRowDef=" displayedColumns"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns:  displayedColumns"></tr>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Company Name </th>
+    <td mat-cell *matCellDef="let record"> {{record.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="score">
+    <th mat-header-cell *matHeaderCellDef> Rating </th>
+    <td mat-cell *matCellDef="let record"> {{record["Overall Score (/10)"]}} </td>
+  </ng-container>
+</table>
+
+<mat-card *ngFor="let record of records" style="margin-top:10px;">
+  <mat-card-header>
+    <mat-card-title>{{record["Store Name"]}} </mat-card-title>
+  </mat-card-header>
+</mat-card> -->
+
+
+
+
+
+
+<!-- <mat-table [style.display]="loading === false ? 'block' : 'none'" [dataSource]="dataSource" class="mat-elevation-z8">
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
 
   <!-- ID Column -->
-  <ng-container matColumnDef="id">
+  <!-- <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
-    <mat-cell *matCellDef="let company"> {{company.id}} </mat-cell>
-  </ng-container>
+    <mat-cell *ngFor="let record of records"> {{record.id}} </mat-cell>
+  </ng-container> -->
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
+  <!-- <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
     <mat-cell *matCellDef="let company"> {{company.name}} </mat-cell>
-  </ng-container>
+  </ng-container> -->
 
   <!-- Rating Column -->
-  <ng-container matColumnDef="rating">
+  <!-- <ng-container matColumnDef="rating">
     <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
     <mat-cell *matCellDef="let company"> {{company.rating}} </mat-cell>
-  </ng-container>
+  </ng-container> -->
 
 
-</mat-table>
+<!-- </mat-table> -->
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../company'
 import { AirtableService } from '../airtable/airtable.service'
+import { Record } from '../record'
 
 @Component({
   selector: 'app-company-list',
@@ -10,7 +11,7 @@ import { AirtableService } from '../airtable/airtable.service'
 
 export class CompanyListComponent implements OnInit {
   loading = true;
-  displayedColumns: string[] = ['id', 'name', 'rating'];
+  displayedColumns: string[] = ['name', 'score'];
 
   
   // this is just dummy data
@@ -20,30 +21,37 @@ export class CompanyListComponent implements OnInit {
   //   {id: 3, name: 'Target', rating: 3}
   // ] 
 
-  public companies: Company[];
+  public records = [];
 
-  dataSource = this.companies
+  dataSource = this.records;
 
   constructor(private _airtableService : AirtableService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     //gets all the data of all the stores
-    this._airtableService.getAPIData().subscribe(
-      (response) => {
-        console.log('response is ', response["records"]);
-        this.companies = response["records"]
+    this._airtableService.getAPIData()
+      .subscribe((response) => {
+        // console.log('response is ', response["records"]);
+        let responses = response["records"]
+        responses.forEach(response => {
+          this.records.push(response.fields)
+        })
       },
       (error) => {
         console.log('error is ', error);
       }
     );
+
+    console.log("records", this.records)
     
     //has the loading button for the page
     setTimeout(() => {
       this.loading = false;
     }, 2000)
   }
+
+  
 
 
 
