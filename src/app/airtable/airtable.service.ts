@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AirtableService {
   private _url: string =
-    'https://api.airtable.com/v0/appMzVVjn9eVT5NBG/Scores?maxRecords=3&view=Company%20Score%20Comparison';
+    'https://api.airtable.com/v0/appMzVVjn9eVT5NBG/Scores?maxRecords=15&view=Company%20Score%20Comparison';
 
   constructor(private http: HttpClient) {}
 

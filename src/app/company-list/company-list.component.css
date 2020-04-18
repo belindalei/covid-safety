@@ -1,45 +1,30 @@
-.records {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
+
+ol{
+  list-style: none;
+  counter-reset: any-name;
 }
-.records li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
+
+li{
+  counter-increment: any-name;
+  margin-bottom: 5px; 
 }
-.records li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-.records li.selected {
-  background-color: #CFD8DC;
+
+li:before{
+  content:counter(any-name);
+  margin-right: 0.8rem;
+  background: #018786;
+  border-radius: 50%;
   color: white;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 0.4rem;
+  text-align: center;
+  display: inline-block; 
+  box-sizing: border-box; 
 }
-.records li.selected:hover {
-  background-color: #BBD8DC;
-  color: white;
-}
-.records .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+
+.company-list{
+  margin: 3em; 
 }
 
 /* centers information in the middle */
@@ -49,10 +34,20 @@
   align-items: center;
   justify-content: center;
   border-style: solid;
+  padding: 20px; 
 }
 
-h1{
+h1, h3{
   text-align: center;
+}
+
+h2{
+  color: #3700B3;
+}
+
+h4{
+  font-weight: bold;
+  color: #018786;
 }
 
 .box{
