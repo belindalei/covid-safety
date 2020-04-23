@@ -23,9 +23,24 @@ li:before{
   box-sizing: border-box; 
 }
 
+.companies li:hover{
+  background-color: #DDD;
+  left: .1em;
+}
+
+.companies li.selected {
+  background-color: #CFD8DC;
+  color: #018786;
+}
+.companies li.selected:hover {
+  background-color: #BBD8DC;
+  color: #018786;
+}
+
 .company-list{
   margin: 3em; 
 }
+
 
 /* centers information in the middle */
 .info-container{

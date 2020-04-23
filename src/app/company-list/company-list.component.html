@@ -8,7 +8,7 @@
   <div class="info-container"> 
 
     <div class="company-list">
-      <ol>
+      <ol class="companies">
         <li *ngFor="let record of records" (click)="onSelect(record)" [class.selected]="record === selectedCompany">
           {{record["Store Name"]}} Score: {{record["Overall Score (/10)"]}}/10
         </li>

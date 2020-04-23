@@ -9,7 +9,7 @@ import { ContributeComponent } from './contribute/contribute.component';
 import { CompanyInfoComponent } from './company-info/company-info.component';
 
 const routes = [
-  { path: 'safety-measures', component: SafetyMeasuresComponent },
+  { path: 'compare', component: SafetyMeasuresComponent },
   { path: 'about', component: AboutComponent },
   { path: 'company-info', component: CompanyInfoComponent },
   { path: 'shop-locator', component: ShopLocatorComponent },
