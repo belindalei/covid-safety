@@ -15,7 +15,7 @@ const routes = [
   { path: 'shop-locator', component: ShopLocatorComponent },
   { path: 'company-list', component: CompanyListComponent },
   { path: 'contribute', component: ContributeComponent},
-  { path: '', redirectTo: 'safety-measures', pathMatch: 'full' }
+  { path: '', redirectTo: 'company-list', pathMatch: 'full' }
 ]; 
 
 @NgModule({
