@@ -9,13 +9,14 @@ import { ContributeComponent } from './contribute/contribute.component';
 import { CompanyInfoComponent } from './company-info/company-info.component';
 
 const routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'company-list'},
   { path: 'compare', component: SafetyMeasuresComponent },
   { path: 'about', component: AboutComponent },
   { path: 'company-info', component: CompanyInfoComponent },
   { path: 'shop-locator', component: ShopLocatorComponent },
   { path: 'company-list', component: CompanyListComponent },
   { path: 'contribute', component: ContributeComponent},
-  { path: '', redirectTo: 'company-list', pathMatch: 'full' }
+  { path: '**', component: CompanyListComponent },
 ]; 
 
 @NgModule({
