@@ -2,34 +2,33 @@
 <mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
 
 <div class="box">
-  <h1>Company Safety Measure Rankings</h1>
-  <h3>Please click on a store name below for additional information.</h3>
+  <h3>Find out how stores are keeping you safe and which one is right for you.</h3>
+  <br>
+  <h1>Companies Ranked by Safety Score</h1>
+  <p class="subtitle">Please click on a store name below for additional information.</p>
 
-  <div class="info-container"> 
-
-    <div class="company-list">
-      <ol class="companies">
-        <li *ngFor="let record of records" (click)="onSelect(record)" [class.selected]="record === selectedCompany">
-          {{record["Store Name"]}} Score: {{record["Safety Score (/10)"]}}/10
-        </li>
-      </ol>
-    </div>
+  <div class="company-list">
+    <ol class="companies">
+      <li *ngFor="let record of records" (click)="onSelect(record)" [class.selected]="record === selectedCompany">
+        {{record["Store Name"]}} Score: {{record["Safety Score (/10)"]}}/10
+      </li>
+    </ol>
+  </div>
 
 
-    <div *ngIf="selectedCompany">
-      <h2>{{selectedCompany["Store Name"]}} Information</h2>
-      <div><h4>Overall Score: {{selectedCompany["Overall Score (/10)"]}}</h4></div>
-      <div><p><strong>Cleans high-touch surfaces:</strong> {{selectedCompany["Cleans High-Touch Surfaces?"]}}</p></div>
-      <div><p><strong>Maintains social distancing:</strong> {{selectedCompany["Maintains Social Distancing?"]}}</p></div>
-      <div><p><strong>Limits store capacity:</strong> {{selectedCompany["Limits Store Capacity?"]}}</p></div>
-      <div><p><strong>Senior shopping hours:</strong> {{selectedCompany["Has Senior Shopping Hours?"]}}</p></div>
-      <div><p><strong>Contactless delivery/pickup:</strong> {{selectedCompany["Has Contactless Delivery/Pickup?"]}}</p></div>
-      <div><p><strong>Contactless payments:</strong> {{selectedCompany["Has Contactless Payments?"]}}</p></div>
-      <div><p><strong>Physical Barriers:</strong> {{selectedCompany["Has Physical Barriers?"]}}</p></div>
-      <div><p><strong>Provides employees masks:</strong> {{selectedCompany["Provides Employees Masks?"]}}</p></div>
-      <div><p><strong>Provides employees gloves:</strong> {{selectedCompany["Provides Employees Gloves?"]}}</p></div>
-      <div><p><strong>Provides hand sanitizer:</strong> {{selectedCompany["Provides Employees Hand Sanitizer?"]}}</p></div>
-    </div>
+  <div class="detailed-info" *ngIf="selectedCompany">
+    <h2>{{selectedCompany["Store Name"]}} Information</h2>
+    <div><h4>Overall Score: {{selectedCompany["Safety Score (/10)"]}}</h4></div>
+    <div><p><strong>Cleans high-touch surfaces:</strong> {{selectedCompany["Cleans High-Touch Surfaces?"]}}</p></div>
+    <div><p><strong>Maintains social distancing:</strong> {{selectedCompany["Maintains Social Distancing?"]}}</p></div>
+    <div><p><strong>Limits store capacity:</strong> {{selectedCompany["Limits Store Capacity?"]}}</p></div>
+    <div><p><strong>Senior shopping hours:</strong> {{selectedCompany["Has Senior Shopping Hours?"]}}</p></div>
+    <div><p><strong>Contactless delivery/pickup:</strong> {{selectedCompany["Has Contactless Delivery/Pickup?"]}}</p></div>
+    <div><p><strong>Contactless payments:</strong> {{selectedCompany["Has Contactless Payments?"]}}</p></div>
+    <div><p><strong>Physical Barriers:</strong> {{selectedCompany["Has Physical Barriers?"]}}</p></div>
+    <div><p><strong>Provides employees masks:</strong> {{selectedCompany["Provides Employees Masks?"]}}</p></div>
+    <div><p><strong>Provides employees gloves:</strong> {{selectedCompany["Provides Employees Gloves?"]}}</p></div>
+    <div><p><strong>Provides hand sanitizer:</strong> {{selectedCompany["Provides Employees Hand Sanitizer?"]}}</p></div>
   </div>
 </div>
 
