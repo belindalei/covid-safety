@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/angular-covid",
+    "public": "dist/safe-stores",
     "ignore": [
       "firebase.json",
       "**/.*",

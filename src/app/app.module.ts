@@ -21,6 +21,11 @@ import { ShopLocatorComponent } from './shop-locator/shop-locator.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import { CompanyInfoComponent } from './company-info/company-info.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -34,6 +39,7 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
     CompanyListComponent,
     ContributeComponent,
     CompanyInfoComponent,
+    MainNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,11 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
     MatProgressSpinnerModule,
     MatTableModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
