@@ -3,6 +3,7 @@ h3{
   font-size: 20px;
   font-weight: bold;
 }
+
 ol{
   list-style: none;
   counter-reset: any-name;
@@ -28,16 +29,27 @@ li:before{
 }
 
 .companies{
-  display: block;  /* Remove bullet points; allow greater control of positioning */
-  padding: 0;      /* Override defaults for lists */
-  margin: 0;       /* Override defaults for lists */
-  width: 100%;     /* Get the row full width */
+  display: inline-block;  /* Remove bullet points; allow greater control of positioning */
+  padding: 0;      
+  margin: 0;
+  align-items: center;
+  width: 100%;     /*Get the row full width*/
 }
+
+.company-list{
+  display: inline-block; 
+  margin-left: auto;
+  margin-right: auto; 
+  width: 50%;
+}
+
 
 .companies li {
     display: inline-block; /* Get all images to show in a row */
-    width: 25%;            /* Show 4 logos per row */
-    text-align: left;    
+    width: 50%;           
+    /* text-align: left;   */
+    font-size: 16px;
+
 }
 
 
@@ -63,12 +75,9 @@ li:before{
     .companies li { width: 100%; } /* On small screens, show one logo per row */
 }
 
-.company-list{
-  margin: 4em; 
-}
-
 .detailed-info{
   text-align: center; 
+  margin: 5em; 
 }
 
 
@@ -80,17 +89,41 @@ h2{
   color: #3700B3;
 }
 
-
-.subtitle{
-  text-align:center;
-}
-
-
 h4{
   font-weight: bold;
   color: #018786;
 }
 
+p{
+  font-size: 16px;
+}
+
+
+.subtitle{
+  text-align:center;
+}
+
+.information-text{
+  margin-bottom: 3em; 
+  margin-top: 3em; 
+}
+
 .box{
-  margin: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 200px;
+  align-items: center;
+}
+
+.box-view{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 200px;
+  align-items: center;
 }
