@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+declare let gtag: Function;
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-covid';
+  constructor(private router: Router) {
+    router.events.subscribe((y: NavigationEnd) => {
+      if (y instanceof NavigationEnd) {
+        gtag('config', 'UA-164770077-1', { 'page_path': y.url });
+      }
+    })
+  }
 }

@@ -31,7 +31,7 @@ li:before{
 .companies{
   display: inline-block;  /* Remove bullet points; allow greater control of positioning */
   padding: 0;      
-  margin: 0;
+  margin-left: 1em;
   align-items: center;
   width: 100%;     /*Get the row full width*/
 }
