@@ -56,7 +56,7 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

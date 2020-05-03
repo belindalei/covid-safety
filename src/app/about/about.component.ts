@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  ids: Array<String> = ['safety scores']
   constructor() { }
 
   ngOnInit(): void {

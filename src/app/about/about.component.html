@@ -9,7 +9,21 @@
       <p>While we suggest staying at home and using contactless delivery for food and supplies, sometimes it may be necessary to shop in stores, especially if delivery isn't available in your area. To help you make an informed decision about which store may be best to shop at, and save time, we've gathered info about popular stores' safety measure and shared it here with you.</p>
       <p>If there is a store that you would like to see added to the list, please <a routerLink="/contribute"
           routerLinkActive="active">click here to contribute</a>.</p>
-      <p><strong>Disclaimer:</strong> Safe Stores is a volunteer-based site aiming to help the general public quickly compare and identify stores based on their public safety practices during the COVID-19 pandemic. Any inaccurate information is unintentional, please email us at <strong>covidsafestores@gmail.com</strong> or submit a <a routerLink="/contribute" routerLinkActive="active">contribute form if you see any inaccurate or missing information</a>.</p>
+      <br>
+      <h4 *ngFor="let link of ids" [attr.id]='link'>
+        <strong>How are {{link}} calculated?</strong>
+      </h4>
+      <p>Each company's safety score is calculated by awarding a point for each safety measure they've implemented to help
+      protect customers and employees. Since there are 10 safety measures companies are scored on, a company can earn up to 10
+      points. A company is awarded a point for a safety measure if they explicitly state, or there is reasonable evidence, on
+      their website(s) and/or in one or more press releases that they've implemented that safety measure. At this time, we
+      don't score companies based on how effectively they've implemented a safety measure, but rather only whether or not they
+      have implemented it.</p>
+      <br>
+      <p><strong>Disclaimer:</strong> Safe Stores is a volunteer-based site aiming to help the general public quickly compare
+      and identify stores based on their public safety practices during the COVID-19 pandemic. Any inaccurate information is
+      unintentional, please email us at <strong>covidsafestores@gmail.com</strong> or submit a <a routerLink="/contribute"
+        routerLinkActive="active">contribute form if you see any inaccurate or missing information</a>.</p>
     </div>
   </div>
 </div>

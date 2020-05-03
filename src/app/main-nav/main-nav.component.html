@@ -25,7 +25,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Safe Stores</span>
+      <span><a routerLink="/company-list" routerLinkActive="active">Safe Stores</a></span>
       <span class="spacer"></span>
       <span class="navlinks" [ngClass]="{'hidden': (isHandset$ | async)}">
         <a mat-button routerLink="/company-list" routerLinkActive="active">Rankings</a>
