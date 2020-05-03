@@ -7,6 +7,7 @@ h3{
 ol{
   list-style: none;
   counter-reset: any-name;
+  margin: 0; 
 }
 
 li{

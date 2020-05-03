@@ -7,13 +7,14 @@
       <h3>Find out how stores are keeping you safe and which one is right for you.</h3>
       <br>
       <h1>Companies Ranked by Safety Score</h1>
-      <p class="subtitle">Please click on a store name below for additional information.</p>
+      <p class="subtitle">Please click on a company name below for more information about their <a routerLink="/about"
+          routerLinkActive="active">safety scores.</a></p>
     </div>
 
     <div class="company-list" >
       <ol class="companies">
         <li *ngFor="let record of records" (click)="onSelect(record)" [class.selected]="record === selectedCompany">
-          {{record["Store Name"]}} Score: {{record["Safety Score (/10)"]}}/10
+          {{record["Store Name"]}}: {{record["Safety Score (/10)"]}}/10
         </li>
       </ol>
     </div>
